@@ -1,0 +1,612 @@
+*{
+    margin: 0;
+    padding: 0;
+ 
+ }
+ 
+ body{
+    background-color: #edcdb5;
+     margin: 0;
+    padding: 0;
+
+}
+.header-name{
+    list-style: none;
+    display: flex;
+    justify-content:end;
+    align-items:end;
+    padding: 20px;
+    gap:20px;
+    text-decoration: none; /* Removes underline from links */
+
+}
+.header-name a {
+    text-decoration: none; /* Removes underline from links */
+    color: #151413; /* Sets link color to black (or any desired color) */
+    font-weight: bold; /* Makes text bold */
+}
+
+.header-name a:hover {
+    color: #242424; /* Changes color on hover (optional) */
+    background-color:  #f2c9ae;
+    border: 5px solid #000; /* Width: 10px, Style: solid, Color: black */
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+
+/* FRONT PAGE START */
+
+.container {
+    display: flex; /* Positions children side by side */
+    justify-content: space-between; /* Creates space between the divs */
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 2rem; /* Adds space between the two divs */
+    padding: 2rem; /* Adds padding around the container */
+    height: 70vh;
+ }
+
+.intro {
+    font-family:'Times New Roman', Times, serif;
+    padding: 2rem;
+    translate: -6px -6px;
+    background-color: #edcdb5;
+    border: 3px solid #000000;
+    box-shadow: 12px 12px 0 #000000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  
+  .head {
+    font-size: 14px;
+    font-weight: 900;
+    width: 100%;
+    height: 32px;
+    background: #ffffff;
+    padding: 5px 12px;
+    color: #000000;
+    border-bottom: 3px solid #000000;
+  }
+  
+  .content {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+ 
+  
+  .intro:hover {
+    translate: -6px;
+  }
+  
+
+
+   
+
+  /*Hrerrrr*/
+
+
+
+.intro h1 {
+    font-size: 2.5em; /* Sets the font size for <h1> */
+    margin-bottom: 10px; /* Removes the space below the <h1> */
+}
+
+.intro h3 {
+     box-sizing: border-box;
+     display: inline-block;
+     background-color: #edcdb5;
+     border: 1px solid rgb(16, 15, 15);
+     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+     backdrop-filter: blur(6px);
+     border-radius: 17px;
+     cursor: pointer;
+     transition: all 0.5s;
+     user-select: none;
+     font-weight: bolder;
+     padding: 5px;
+     margin-top: 10px;
+     margin-bottom: 8px;
+
+}
+
+.intro h3:hover {
+    color: #242424; /* Changes color on hover (optional) */
+    background-color: #f2c9ae;
+  
+ 
+    
+}
+.intro p{
+    padding: 10px;
+    width: 50%; /* Adjust the width as needed */
+    padding-top:  10px; /* Add padding at the top */
+
+ }
+/* FRONT PAGE END */
+
+  /**PHONE SIZE**/
+
+
+  @media (max-width: 600px) {
+    /* Adjustments for phone screens */
+    .intro h1 {
+        font-size: 2em; /* Make h1 smaller */
+    }
+    
+    .intro h3 {
+        font-size: 1.2em; /* Make h3 smaller */
+        width: 100%; /* Full width for h3 on mobile */
+        padding: 8px;
+    }
+    
+    .intro p {
+        width: 90%; /* Increase width of paragraph */
+        padding: 8px;
+    }}
+
+
+
+
+
+
+/* About Section */
+.About-container {
+    margin-top: 1rem; /* Add space to account for the fixed header */
+  }
+
+.About {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: start;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Adds a shadow */
+
+        
+   }
+
+.About h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.About p {
+    font-size: 1.2rem;
+    color: #111111;
+    max-width: 800px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Add some spacing between paragraphs */
+.About p:last-child {
+    margin-bottom: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about h1 {
+        font-size: 2rem;
+    }
+    
+    .about p {
+        font-size: 1rem;
+    }
+}
+
+  /** Skills**/
+ 
+.Skills{
+   text-align: center;
+    margin-bottom: 5rem;
+     margin-top: 5rem;
+
+
+}
+.boxes{
+    display: flex;
+    flex-direction:row;
+    align-items: center ;
+    justify-content: center;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 5rem;
+    gap: 5rem;
+
+}
+ 
+.card {
+    width:170px;
+    height:170px;
+    perspective: 1000px;
+    border: 10px solid #0e0e0d;
+
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+ 
+  .card-front {
+    background-color: #edcdb5;
+    color: #111010;
+    display: flex;
+    align-items: center;
+    border: 10px solid  #f2c9ae;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 16px;
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    background-color:  #f2c9ae;
+    color: #050505;
+    display: flex;
+    align-items: center;
+    border: 10px solid #0e0e0d;
+     justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+  }
+  .card ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  }
+/*PHONE SIZE**/
+@media (max-width: 900px) {
+
+    .boxes{
+        display: flex;
+        flex-direction:column;
+        align-items: center ;
+        justify-content: center;
+        text-align: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        margin-bottom: 5rem;
+        gap: 5rem;
+    
+    }
+
+
+
+
+}
+
+
+/* PROJECT */ 
+
+.Projects{
+    padding-top: 2rem;
+    box-shadow: 5px 5px 15px rgba(23, 23, 22, 0.5); /* Adds a shadow */
+
+}
+.Projects h1{
+    text-align: left;
+    font-size: 2.5rem;
+    flex-wrap: wrap;
+    padding-left: 5rem;
+    color: #111010;
+      }
+    .projects-container{
+        display: flex;
+         justify-content: center;
+        padding: 2rem;
+        gap: 5rem;
+        padding-bottom: 6rem;
+
+    }
+
+
+.project {
+    width: 300px;
+    padding: 20px;
+    background-color: #edcdb5;
+        border: 6px solid #000;
+    box-shadow: 12px 12px 0 #000;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 17px 17px 0 #000;
+  }
+  
+  .project h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 3px;
+    background-color: #000;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+  
+  .project:hover .project h2::after {
+    transform: translateX(0);
+  }
+  
+  .card__content {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  
+
+  .card__button {
+    border: 3px solid #000;
+    background: #edcdb5;
+    color: #0a0a0a;
+    padding: 10px;
+    font-size: 15px;
+    left: 20%;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 100px;
+    height: 50px;
+  }
+  
+  .card__button::before {
+    content: "Sure?";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    background-color: #edcdb5;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+  }
+  
+  .card__button:hover::before {
+    transform: translateY(0);
+  }
+  
+  .card__button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes glitch {
+    0% {
+      transform: translate(2px, 2px);
+    }
+    25% {
+      transform: translate(-2px, -2px);
+    }
+    50% {
+      transform: translate(-2px, 2px);
+    }
+    75% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(2px, 2px);
+    }
+  }
+  
+  .glitch {
+    animation: glitch 0.3s infinite;
+  }
+  
+
+/* Media query for responsive design */
+@media (max-width: 900px) {
+    .project {
+        width: 300px;
+        height: 300px;
+        padding-left: 2rem;
+        background-color: #edcdb5;
+        border: 6px solid #000;
+        box-shadow: 12px 12px 0 #000;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      
+        .projects-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            gap: 5rem;
+            padding-bottom: 6rem;
+    
+        }
+    
+    
+    
+      
+    
+}
+
+
+  /**---Contact----**/
+
+.Contact{
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    height: 60vh;
+
+     
+}
+
+.mainh2{
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-left: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000; /* Adjust the thickness and color of the border */
+    width: 80%; /* Adjust the width for how short you want the lines to be */
+     margin-left: 5rem;
+
+}
+.Phrase{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 5rem;
+
+
+
+}
+.box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    grid-template-rows: 1fr 1fr; /* Two rows */
+    gap: 20px; /* Space between boxes */
+    padding: 20px;
+    max-width: 800px; /* Optional: Limit the width of the container */
+    margin: 0 auto; /* Center the container on the page */
+    padding-left: 5rem;
+    padding-top: 10px;
+}
+
+.box {
+    border: 2px solid #050505;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(241, 239, 239, 0.1);
+    text-align: center;
+}
+
+.box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media (max-width: 576px) {
+    /**---Contact Section for Phone Sizes----**/
+    
+    .Contact {
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: flex-start; /* Align items at the top */
+        height: auto; /* Adjust height for content */
+    }
+
+    .mainh2 {
+        text-align: center;
+        font-size: 2rem; /* Smaller font size */
+        margin-bottom: 1rem;
+        padding: 0; /* Remove padding for smaller screens */
+        border-bottom: 2px solid #000; /* Keep border */
+        width: 90%; /* Fit content within screen width */
+        margin: 0 auto; /* Center horizontally */
+    }
+
+    .Phrase {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+        font-weight: 400;
+        margin: 1rem auto; /* Add spacing and center text */
+        text-align: center; /* Center-align text for readability */
+        padding: 0 1rem; /* Add horizontal padding */
+    }
+
+    .box-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px; /* Reduce space between boxes */
+        padding: 10px; /* Smaller padding */
+        width: 100%; /* Full-width container */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .box {
+        border: 1px solid #050505;
+        border-radius: 8px; /* Slightly smaller radius */
+        padding: 15px; /* Adjust padding for compact design */
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .box h2 {
+        font-size: 1.2rem; /* Smaller font size for titles */
+        margin-bottom: 5px;
+        text-align: center; /* Center-align titles */
+    }
+
+    .box a {
+        font-size: 0.9rem; /* Adjust font size for links */
+        text-decoration: none;
+        color: #000; /* Ensure good visibility */
+    }
+}
+
+
+
+footer{
+    border-top: 2px solid #000; /* Adds a solid black line under the heading */
+    text-align:left ;
+    padding-left: 5rem;
+    padding-bottom: 5px;
+    width: 80%; /* Adjust the width for how short you want the lines to be */
+    margin-left: 5rem;
+
+
+}
